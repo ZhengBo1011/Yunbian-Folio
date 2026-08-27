@@ -7,7 +7,7 @@
 **当前平台**：macOS 原生版（Swift/SwiftData）。
 **多端路线**：鸿蒙版（ArkTS）开发推进中，后续规划 Android、iOS、Windows、Linux 版本；多端数据通过 WebDAV 保持同步更新。
 
-> 🇬🇧 **[English version of this README](README.en.md)**
+>  **[English version of this README](README.en.md)**
 
 ---
 
