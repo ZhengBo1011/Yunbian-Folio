@@ -4,7 +4,7 @@ A **local-first** personal library management app.
 
 Capture books via camera scanning / manual entry / CSV import, enrich metadata automatically through a three-tier fallback chain (Douban → Open Library → Google Books), organize your collection on a three-pane bookshelf, and close the loop with reading status, lending, notes, and curated lists — all with WebDAV multi-device sync. **Your data always stays in your own hands.**
 
-**Current platform**: native macOS (Swift/SwiftData).
+**Current platform**: native macOS (Swift/SwiftData), **v1.0.0 stable**.
 **Roadmap**: a HarmonyOS edition (ArkTS) is in active development; Android, iOS, Windows and Linux are planned. All editions will stay in sync over WebDAV.
 
 ---
@@ -80,10 +80,18 @@ Capture books via camera scanning / manual entry / CSV import, enrich metadata a
 
 | Platform | Status |
 |---|---|
-| macOS (native) | ✅ Released — v0.2.3 |
+| macOS (native) | ✅ v1.0.0 (Stable) |
 | HarmonyOS (ArkTS/API26) | 🔄 In development |
 | Android / iOS | 📋 Planned |
-| Windows / Linux | 📋 Planned |
+| Windows | 📋 Planned |
+
+### 🔮 Software Roadmap
+
+- **Multi-device sync GA**: HarmonyOS ↔ macOS two-way WebDAV sync graduating to stable, then Android / iOS / Windows joining the same sync protocol — changes on any device converge everywhere
+- **PDF e-book reading & management**: e-copies become first-class readable assets — PDF import into the library, built-in reader, reading progress & notes integration, e-book file management per copy/location
+- **AI reading insights**: one-click reading reports based on your library (slot reserved in Statistics)
+- **Cloud cover sidecar**: covers synced via a dedicated WebDAV folder to slim snapshots
+- Ongoing polish: more statistics dimensions, batch management tools, i18n
 
 ---
 
@@ -99,6 +107,24 @@ Capture books via camera scanning / manual entry / CSV import, enrich metadata a
 3. First launch: if macOS asks for Keychain access, click **Always Allow** (only once per signing identity)
 
 ## Changelog
+
+### v1.0.0 — Stable (build 13)
+
+First stable release. Focused on display polish and sync reliability:
+
+- **Text display system rework**
+  - Two-row middle-column book rows: title owns row 1; on narrow widths ISBN then rating auto-hide while author/year stay
+  - Book detail info grid locks to single lines (overflow ellipsis); "Metadata Lock" moved to the edit sheet
+  - Copy info in one justified line: entries never compress or wrap; narrow widths scroll horizontally with a fade edge; action buttons pinned right
+  - Global text rules: content text up to 2 lines; badges (reading status / categories / stats) never wrap and scroll horizontally
+  - Book-list intro capped at 5 lines; "Owned" badge wording fix; list & stats pages gray out book-scoped toolbar buttons
+- **Sync reliability**
+  - Fixed "cloud download only appears after the next add/delete": sync now commits immediately and refreshes all views
+  - Backup restore and pairing (download/upload) refresh the UI right away
+  - Manual sync decoupled from auto-sync: toolbar Sync and Settings "Sync Now" work even with auto-sync off
+- **Engineering**
+  - New reusable components (flow layout retired in favor of scroll, fade-edge modifier)
+  - HeadlessCheck 53 checks + SyncSim + Debug/Release builds all green
 
 ### v0.2.3 (build 12)
 
