@@ -4,8 +4,8 @@ A **local-first** personal library management app.
 
 Capture books via camera scanning / manual entry / CSV import, enrich metadata automatically through a three-tier fallback chain (Douban → Open Library → Google Books), organize your collection on a three-pane bookshelf, and close the loop with reading status, lending, notes, and curated lists — all with WebDAV multi-device sync. **Your data always stays in your own hands.**
 
-**Current platform**: native macOS (Swift/SwiftData), **v1.1.0(3)**.
-**Roadmap**: a HarmonyOS edition (ArkTS) is in active development; Android, iOS and Windows are planned. All editions will stay in sync over WebDAV.
+**Current platform**: native macOS (Swift/SwiftData), **v1.1.0(3)**; a native **Windows edition v1.0.0 is complete and launching soon**.
+**Roadmap**: a HarmonyOS edition (ArkTS) is in active development; Android and iOS are planned. All editions will stay in sync over WebDAV.
 
 > 📖 **[中文版 README](README.md)**
 > 📦 **Download**: grab the latest DMG / ZIP from [Releases](../../releases)
@@ -82,13 +82,14 @@ Capture books via camera scanning / manual entry / CSV import, enrich metadata a
 | Platform | Status |
 |---|---|
 | macOS (native) | ✅ v1.1.0(3) |
+| Windows (native) | 🔜 v1.0.0 complete, launching soon |
 | HarmonyOS (ArkTS/API26) | 🔄 In development |
 | Android / iOS | 📋 Planned |
-| Windows | 📋 Planned |
 
 ### 🔮 Software Roadmap
 
-- **Multi-device sync GA**: HarmonyOS ↔ macOS two-way WebDAV sync graduating to stable, then Android / iOS / Windows joining the same protocol
+- **Windows launch**: the native Windows edition v1.0.0 is complete — first public release coming soon
+- **Multi-device sync GA**: HarmonyOS ↔ macOS two-way WebDAV sync graduating to stable, then Android / iOS joining the same protocol, with Windows converging next
 - **PDF e-book reading & management**: e-copies become first-class readable assets with a built-in reader and integrated progress & notes
 - **AI reading insights**: one-click reading reports based on your library
 - **Cloud cover sidecar**: covers synced via a dedicated WebDAV folder
