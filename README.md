@@ -4,8 +4,8 @@
 
 扫码/手输/CSV 三通道快速录入，三级元数据自动补全（豆瓣 → Open Library → Google Books），三栏书架组织藏书，完整的阅读/借阅/笔记/书单闭环，WebDAV 多端同步——数据始终保存在你自己手里。
 
-**当前平台**：macOS 原生版（Swift/SwiftData），**v1.1.0(3)**。
-**多端路线**：鸿蒙版（ArkTS）开发推进中，后续规划 Android、iOS、Windows 版本；多端数据通过 WebDAV 保持同步更新。
+**当前平台**：macOS 原生版（Swift/SwiftData），**v1.1.0(3)**；**Windows 原生版 v1.0.0 已完成开发，近期上线**。
+**多端路线**：鸿蒙版（ArkTS）开发推进中，后续规划 Android、iOS 版本；多端数据通过 WebDAV 保持同步更新。
 
 > 📖 **[English README](README.en.md)**
 > 📦 **下载安装**：前往 [Releases](../../releases) 获取最新版 DMG / ZIP
@@ -89,13 +89,14 @@
 | 平台 | 状态 |
 |---|---|
 | macOS（原生） | ✅ v1.1.0(3) |
+| Windows（原生） | 🔜 v1.0.0 已完成开发，近期上线 |
 | 鸿蒙 HarmonyOS（ArkTS/API26） | 🔄 开发推进中 |
 | Android / iOS | 📋 规划中 |
-| Windows | 📋 规划中 |
 
 ### 🔮 软件开发规划
 
-- **多设备同步上线**：鸿蒙端与 macOS 端经 WebDAV 双向同步打通后正式发布，后续 Android / iOS / Windows 接入同一同步协议
+- **Windows 版上线**：Windows 原生版 v1.0.0 开发完成，近期发布首个公开版本
+- **多设备同步上线**：鸿蒙端与 macOS 端经 WebDAV 双向同步打通后正式发布，后续 Android / iOS 接入同一同步协议，Windows 端逐步并入
 - **PDF 电子书阅读与管理**：电子版藏书升级为「可阅读资产」——PDF 导入书库、内置阅读器、阅读进度与笔记联动
 - **AI 阅读分析**：基于当前书库一键生成阅读报告与结构总结（统计页卡位已预留）
 - **封面旁路云存储**：封面经 WebDAV 独立目录同步，减少快照体积
