@@ -4,7 +4,7 @@
 
 扫码/手输/CSV 三通道快速录入，三级元数据自动补全（豆瓣 → Open Library → Google Books），三栏书架组织藏书，完整的阅读/借阅/笔记/书单闭环，WebDAV 多端同步——数据始终保存在你自己手里。
 
-**当前平台**：macOS 原生版（Swift/SwiftData），**v1.1.0(3)**；**Windows 原生版 v1.0.0 已完成开发，近期上线**。
+**当前平台**：macOS 原生版（Swift/SwiftData），**v1.1.1**；**Windows 原生版 v1.0.0 正式版已发布**。
 **多端路线**：鸿蒙版（ArkTS）开发推进中，后续规划 Android、iOS 版本；多端数据通过 WebDAV 保持同步更新。
 
 > 📖 **[English README](README.en.md)**
