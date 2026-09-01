@@ -4,8 +4,8 @@
 
 扫码/手输/CSV 三通道快速录入，三级元数据自动补全（豆瓣 → Open Library → Google Books），三栏书架组织藏书，完整的阅读/借阅/笔记/书单闭环，WebDAV 多端同步——数据始终保存在你自己手里。
 
-**当前平台**：macOS 原生版（Swift/SwiftData），**v1.1.2**；**Windows 原生版（WinUI 3 / .NET 8）v1.1.2 正式版（源码与安装包见源码仓库 Releases）**。
-**多端路线**：鸿蒙版（ArkTS）开发推进中，后续规划 Android、iOS 版本；多端数据通过 WebDAV 保持同步更新。
+**当前平台**：macOS 原生版（Swift/SwiftData）v1.1.2；**Windows 原生版（WinUI 3 / .NET 8）v1.1.2 正式版**；**鸿蒙版（ArkTS）v0.1.0 测试版（适配电脑 / 平板，源码见源码仓库）**。
+**多端路线**：鸿蒙版 v0.1.0 测试版已发布（适配电脑 / 平板）；后续规划 Android、iOS 版本；多端数据通过 WebDAV 保持同步更新。
 
 > 📖 **[English README](README.en.md)**
 > 📦 **下载安装**：前往 [Releases](../../releases) 获取最新版 DMG / ZIP
@@ -90,12 +90,13 @@
 |---|---|
 | macOS（原生） | ✅ v1.1.2 |
 | Windows（原生） | ✅ v1.1.2 正式版 |
-| 鸿蒙 HarmonyOS（ArkTS/API26） | 🔄 开发推进中 |
+| 鸿蒙 HarmonyOS（ArkTS/API26） | ✅ v0.1.0 测试版（电脑/平板） |
 | Android / iOS | 📋 规划中 |
 
 ### 🔮 软件开发规划
 
-- **Windows 版上线**：Windows 原生版 v1.1.2 正式版已发布，源码与绿色版安装包见源码仓库 Releases；鸿蒙端与 macOS 端经 WebDAV 双向同步打通后正式发布，后续 Android / iOS 接入同一同步协议，Windows 端逐步并入
+- **Windows 版上线**：Windows 原生版 v1.1.2 正式版已发布，源码与绿色版安装包见源码仓库 Releases
+- **鸿蒙版测试版**：鸿蒙版 v0.1.0 测试版已发布（适配电脑 / 平板），与 macOS / Windows 端经 WebDAV 双向同步打通；后续 Android / iOS 接入同一同步协议，Windows 端逐步并入
 - **PDF 电子书阅读与管理**：电子版藏书升级为「可阅读资产」——PDF 导入书库、内置阅读器、阅读进度与笔记联动
 - **AI 阅读分析**：基于当前书库一键生成阅读报告与结构总结（统计页卡位已预留）
 - **封面旁路云存储**：封面经 WebDAV 独立目录同步，减少快照体积
