@@ -4,7 +4,7 @@ A **local-first** personal library management app.
 
 Capture books via camera scanning / manual entry / CSV import, enrich metadata automatically through a three-tier fallback chain (Douban → Open Library → Google Books), organize your collection on a three-pane bookshelf, and close the loop with reading status, lending, notes, and curated lists — all with WebDAV multi-device sync. **Your data always stays in your own hands.**
 
-**Current platform**: native macOS (Swift/SwiftData), **v1.1.0(3)**; a native **Windows edition v1.0.0 stable is released (source published; installer coming soon)**.
+**Current platform**: native macOS (Swift/SwiftData), **v1.1.2**; a native **Windows edition (WinUI 3 / .NET 8) v1.1.2 stable (source and portable package available on the source repo Releases)**.
 **Roadmap**: a HarmonyOS edition (ArkTS) is in active development; Android and iOS are planned. All editions will stay in sync over WebDAV.
 
 > 📖 **[中文版 README](README.md)**
@@ -81,14 +81,14 @@ Capture books via camera scanning / manual entry / CSV import, enrich metadata a
 
 | Platform | Status |
 |---|---|
-| macOS (native) | ✅ v1.1.0(3) |
-| Windows (native) | 🔜 v1.0.0 stable (source published; installer coming soon) |
+| macOS (native) | ✅ v1.1.2 |
+| Windows (native) | ✅ v1.1.2 stable |
 | HarmonyOS (ArkTS/API26) | 🔄 In development |
 | Android / iOS | 📋 Planned |
 
 ### 🔮 Software Roadmap
 
-- **Windows launch**: the native Windows edition v1.0.0 stable source is published (tag `windows-v1.0.0`); installer will follow on Releases
+- **Windows launch**: the native Windows edition v1.1.2 stable is released; source and portable build are available on the source repo Releases
 - **Multi-device sync GA**: HarmonyOS ↔ macOS two-way WebDAV sync graduating to stable, then Android / iOS joining the same protocol, with Windows converging next
 - **PDF e-book reading & management**: e-copies become first-class readable assets with a built-in reader and integrated progress & notes
 - **AI reading insights**: one-click reading reports based on your library
@@ -110,6 +110,13 @@ Capture books via camera scanning / manual entry / CSV import, enrich metadata a
 4. Upgrading: install over the old version — data migrates automatically (a JSON backup beforehand is recommended)
 
 ## Changelog
+
+### v1.1.2 — Sync reliability fixes (macOS / Windows)
+
+- **Sync merge semantics fixed**: books, lists, copies, notes and ratings keep tombstone priority so deletions propagate correctly across devices; managed options (locations, tags, reading-status entries, category options) now use live priority so tombstones from older snapshots no longer swallow live local data
+- **Reading status protection**: when a restored reading record lacks a status-option id, the local value is preserved; sidebar and lists no longer fall back to "unset" unexpectedly
+- **Backup restore choice**: importing a bundle/JSON backup now asks Overwrite or Merge first, preventing accidental full-library replacement (the Windows dialog is localized in zh-CN/en-US)
+- **Windows v1.1.2**: fully aligned with macOS sync semantics, plus cross-device regression tests on real-device fixtures; the Windows portable package ships with the source repo v1.1.2 release
 
 ### v1.1.0(3) (build 18)
 
